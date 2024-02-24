@@ -4,7 +4,7 @@
 Vagrant.configure("2") do |config|
   config.vm.box = 'digital_ocean'
   config.vm.box_url = "https://github.com/devopsgroup-io/vagrant-digitalocean/raw/master/box/digital_ocean.box"
-  config.ssh.private_key_path = '~/.ssh/id_rsa'
+  config.ssh.private_key_path = '~/.ssh/temp_ssh_key'
 
   config.vm.synced_folder "remote_files", "/minitwit", type: "rsync"
   config.vm.synced_folder '.', '/vagrant', disabled: true
